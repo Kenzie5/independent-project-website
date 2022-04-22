@@ -1,0 +1,268 @@
+/*
+    Dragonfly Incense style sheet
+    Filename: styles.html
+
+    Author: Mackenzie Brown
+    Date: 2/6/2022
+    Independent Coding Project
+
+*/
+/* reset styles */
+html {
+    font-size: 12px;
+}
+body, header, h1, h2, h3, article, p, div, footer, a, nav, figure, figcaption {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+/* body and page container */
+.container {
+    text-align: left;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: rgba(218, 165, 32, 0.75);
+    position: relative;
+    top: 175px;
+    box-shadow: 5px 5px 5px rgb(22, 22, 22);
+}
+body {
+    background-color: #90ee90;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    background: url("Images/Background.jpg");
+}
+p {
+    font-size: 1.5em;
+    line-height: 1.25em;
+}
+
+/* document-wide styles */
+a:link {
+    color: rgb(58, 58, 252);
+}
+a:visited {
+    color: rgb(9, 9, 41);
+}
+a:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+/* skip navigation link */
+p.skipnavigation a {
+    position: absolute;
+    left: -10000px;
+ }
+ p.skipnavigation a:focus {
+    color: ivory;
+    background-color: #34180f;
+    top: 0.4em;
+    left: auto;
+    right: 0.4em;
+    z-index: 2;
+ }
+
+/* header section */
+header {
+    max-width: 640px;
+    text-align: center;
+    /* background-color: rgb(95, 158, 160); */
+    z-index: 1;
+    /* color: rgb(139, 69, 19); */
+    /* border-bottom: 1px solid #8b4513; */
+    /* padding: 1em 0; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 5px 0 5px rgb(22, 22, 22);
+}
+/* header p {
+    border: 2px solid #8b4513;
+    position: absolute;
+    top: 1.5em;
+    left: 2em;
+} */
+header h1 {
+    height: 146px;
+}
+
+h2 {
+    text-align: center;
+    padding: 0.25em;
+    font-family: 'Cinzel', "Times New Roman", Times, serif;
+    font-size: 2.5em;
+}
+h3 {
+    font-family: 'Cinzel', "Times New Roman", Times, serif;
+    font-size: 2em;
+}
+
+/* site navigation bar */
+
+nav.site {
+    text-align: center;
+    max-width: 640px;
+    z-index: 1;
+    position: fixed;
+    background-color: rgb(95, 158, 160);
+    color: #8b4513;
+    border-top: 1px solid #8b4513;
+    border-bottom: 1px solid #8b4513;
+    width: 100%;
+    top: 146px;
+    box-shadow: 5px 0 5px rgb(22, 22, 22);
+}
+nav.site p {
+    display: inline-block;
+    margin: 0.5em;
+}
+nav.site a:link {
+    color: #8b4513;
+}
+nav.site a:visited {
+    color: #331a07;
+}
+nav.site a:hover, nav.site a:focus {
+    color: #90ee90;
+}
+nav.page {
+    border: 1px solid rgb(25, 25, 112);
+    text-align: center;
+}
+nav.page p {
+    display: inline-block;
+    margin: 0.5em;
+}
+
+/* main content */
+article {
+    color: rgb(25, 25, 112);
+    margin: 1em;
+}
+.italics {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+
+article p:first-line {
+    font-weight: bold;
+}
+article.store p:first-line {
+    font-weight: normal;
+}
+article.contact div p:first-line {
+    font-weight: normal;
+}
+article p:first-letter {
+    font-size: 2em;
+    float: left;
+}
+article.store p:first-letter {
+    font-size: 1em;
+    float: none;
+}
+article.contact div p:first-letter {
+    font-size: 1em;
+    float: none;
+}
+
+div.about {
+    color: rgb(25, 25, 112);
+    margin: 1em;
+}
+div.about article {
+    max-width: 50%;
+}
+div.about article.who {
+    float: right;
+    clear: left;
+}
+
+article.store {
+    border: 1px solid rgb(25, 25, 112);
+    margin: 1em;
+}
+article.store p {
+    color: #4b0082;
+    text-align: center;
+    padding: 0.25em;
+}
+
+article.contact {
+    margin: 1em;
+}
+article.contact p {
+    padding: 0.5em 0;
+}
+
+figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
+/* footer section */
+footer {
+    text-align: right;
+    background-color: rgb(95, 158, 160);
+    color: #8b4513;
+    border-top: 1px solid #8b4513;
+    margin-top: 1em;
+}
+footer p {
+    padding: 0.25em;
+}
+
+/* print styles */
+@media print {
+    body, header, h1, h2, h3, article, p, div, footer, .container, article.store p {
+       color: #000000;
+       background: #ffffff;
+    }
+    body {
+       max-width: 100%;
+       border: 0;
+    }
+    header {
+        border-bottom: 1px solid #000000;
+        z-index: 0;
+        position: static;
+    }
+    header p {
+        border: 2px solid #000000;
+    }
+    article.store {
+        border: 1px solid #000000;
+    }
+    footer {
+        border-top: 1px solid #000000;
+    }
+ }
+ @page {
+    margin: 1in;
+ }
+/* ---SECTIONS TO BE USED--- */
+
+/* form styles */
+
+/* fieldset styles */
+
+/* field styles */
+
+/* label styles */
+
+/* feedback preview section */
